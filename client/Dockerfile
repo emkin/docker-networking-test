@@ -1,3 +1,5 @@
 FROM alpine:3.13
 
-CMD ["ping", "172.30.0.2", "-c2"]
+RUN apk add curl
+
+CMD ["curl", "http://172.30.0.2:80"]
